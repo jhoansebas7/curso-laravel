@@ -23,4 +23,11 @@ public function eliminarAlumno($id)
 $alumno = Alumno::find($id);
 $alumno->delete();
 }
+public function actualizarAlumno($id, $alumnoActualizar)
+{
+$alumno = Alumno::find($id);
+$alumno->apellido = $alumnoActualizar->apellido;
+$alumno->edad = $alumnoActualizar->edad;
+$alumno->save();}
+
 }

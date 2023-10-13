@@ -27,7 +27,7 @@ class AlumnoController extends Controller
     
     public function store(Request $request)
     {
-        $this->alumnos->InsertarAlumnos($request);
+        $this->alumnos->InsertarAlumno($request);
         return redirect()->action([AlumnoController::class, 'index']);
     }
 
